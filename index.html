@@ -533,4 +533,28 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
 })();
 </script>
 
+<script>
+/* Contador de cliques BridgeHUB (GoatCounter, sem dados pessoais) */
+window.goatcounter={path:function(p){return location.pathname}};
+(function(){
+ function sec(el){var s=el.closest('section');return s?s.id:'inicio';}
+ function txt(el){return (el.textContent||'').replace(/\s+/g,' ').trim().slice(0,90);}
+ function send(path,title){try{if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:path,title:title||path,event:true});}}catch(e){}}
+ document.addEventListener('click',function(e){
+  var a=e.target.closest('a,button'); if(!a) return;
+  var s=sec(a), name;
+  if(a.closest('.tabs')){name='aba/'+(a.getAttribute('href')||'').replace('#','');}
+  else if(a.classList.contains('big')){name='inicio-botao/'+(a.getAttribute('href')||'').replace('#','');}
+  else if(a.classList.contains('vbtn')){var li=a.closest('li');var b=li&&li.querySelector('b'),sm=li&&li.querySelector('small');name='vaga/'+(b?txt(b):'')+' | '+(sm?txt(sm):'');}
+  else if(a.classList.contains('vchip')){name='vagas-area/'+txt(a);}
+  else if(a.classList.contains('st')){name='vagas-resumo/'+txt(a.querySelector('.k')||a);}
+  else if(a.closest('.evr')){var h=a.closest('.evr').querySelector('h3');name='evento/'+(h?txt(h):txt(a));}
+  else if(a.classList.contains('copy')||a.classList.contains('go2')){var cp=a.closest('.cp');var h3=cp&&cp.querySelector('h3');name='cupom/'+(h3?txt(h3):'')+(a.classList.contains('copy')?' | copiou cupom':' | foi pra loja');}
+  else {name=s+'/'+txt(a);}
+  send(name,name);
+ },true);
+ window.addEventListener('hashchange',function(){send('aba-aberta/'+(location.hash||'#inicio').slice(1));});
+})();
+</script>
+<script data-goatcounter="https://bridgehub-rs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body></html>
