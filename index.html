@@ -226,7 +226,7 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
 
 <header class="bar">
 <a class="brand" href="#inicio">Bridge<b>HUB</b></a>
-<nav class="tabs"><a href="#inicio">Início</a><a href="#radar">📡 Radar</a><a href="#vagas">💼 Vagas</a><a href="#eventos">🎤 Eventos</a><a href="#empreender">🚀 Empreender</a></nav>
+<nav class="tabs"><a href="#inicio">Início</a><a href="#radar">📡 Radar</a><a href="#vagas">💼 Vagas</a><a href="#eventos">🎤 Eventos</a><a href="#empreender">🚀 Empreender</a><a href="#cupons">🎁 Cupons</a></nav>
 </header>
 
 <section id="inicio">
@@ -242,6 +242,7 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
 <a class="big" href="#vagas"><div class="ic">💼</div><div><h2>Vagas</h2><p>Porto Alegre, RS, home office e concursos</p></div><div class="go">›</div></a>
 <a class="big" href="#eventos"><div class="ic">🎤</div><div><h2>Eventos</h2><p>Congressos, palestras, workshops e treinamentos</p></div><div class="go">›</div></a>
 <a class="big" href="#empreender"><div class="ic">🚀</div><div><h2>Empreender</h2><p>MEI, impostos, Sebrae e dicas pra quem empreende</p></div><div class="go">›</div></a>
+<a class="big" href="#cupons"><div class="ic">🎁</div><div><h2>Cupons e descontos</h2><p>Descontos exclusivos de parceiros com o cupom BRIDGE</p></div><div class="go">›</div></a>
 </div>
 <p class="note">@lucasvitaloficial · Lucas Vital, Consultoria e Educação Corporativa</p>
 </div>
@@ -517,9 +518,18 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
 
 
 
+<section id="cupons" hidden>
+<div class="wrap">
+<div class="hello"><div class="lbl">Clube BridgeCONEXÕES</div><h1>Cupons e descontos</h1><p>Benefícios exclusivos de empresas parceiras pra quem faz parte da comunidade. É só copiar o cupom e usar no site ou na loja.</p></div>
+<div class="cp" style="text-align:center;align-items:center;padding:28px 18px"><div style="font-size:44px">🎁</div><h3 style="font-size:20px">Os primeiros cupons chegam em breve</h3><p style="margin:0;color:var(--muted);max-width:44ch">Estamos fechando as parcerias. Quando um cupom novo entrar, ele aparece aqui com o desconto, o código e o link direto pra loja.</p></div>
+<div class="cp join"><h3>🤝 Tem uma empresa? Seja parceiro</h3><p>Ofereça um benefício pra comunidade BridgeCONEXÕES e coloque a tua marca aqui no BridgeHUB, que é aberto todos os dias.</p><div class="row"><a class="go2" style="margin-left:0" href="https://www.instagram.com/lucasvitaloficial/">Falar com o Lucas ›</a></div></div>
+<p class="note">Os cupons são oferecidos pelas empresas parceiras. Condições e validade no site de cada empresa.</p>
+</div>
+</section>
+
 <script>
 (function(){
- var ids=['inicio','radar','vagas','eventos','empreender'];
+ var ids=['inicio','radar','vagas','eventos','empreender','cupons'];
  function show(){
   var h=(location.hash||'#inicio').slice(1); if(ids.indexOf(h)<0) h='inicio';
   ids.forEach(function(i){document.getElementById(i).hidden=(i!==h);});
