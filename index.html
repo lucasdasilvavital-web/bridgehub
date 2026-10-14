@@ -47,7 +47,7 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
 .go2{margin-left:auto;background:var(--gold);color:var(--navy);text-decoration:none;font-weight:700;font-size:13px;padding:9px 12px;border-radius:10px}
 .ex{position:absolute;top:12px;right:12px;font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);background:#f0ece2;padding:3px 8px;border-radius:20px}
 .cp.join{background:var(--navy);color:#fff}.cp.join h3{color:var(--gold)}.cp.join p{margin:0;color:#dfe3ea}
-@media (max-width:640px){.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;overflow:visible}.tabs a{padding:6px 4px;font-size:12.5px;text-align:center}}
+@media (max-width:640px){.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;overflow:visible}.tabs a{padding:6px 4px;font-size:12.5px;text-align:center}}
 .vintro{margin:-6px 0 0;color:var(--muted);font-size:13.5px}
 .vchips{display:flex;flex-wrap:wrap;gap:8px}
 .vchip{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:13px;font-weight:700;padding:7px 11px;border-radius:20px;cursor:pointer}
@@ -222,13 +222,22 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
  #radar .foot{padding:10px 16px;flex-direction:column;gap:4px}
 }
 
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:10px}
+.bk{background:var(--card);border-radius:14px;padding:10px;box-shadow:0 2px 10px rgba(26,37,64,.08);display:flex;flex-direction:column;gap:4px;min-width:0}
+.cov{aspect-ratio:2/3;border-radius:4px 10px 10px 4px;background:linear-gradient(90deg,rgba(0,0,0,.28) 0 7px,transparent 7px),linear-gradient(160deg,var(--bc),#0d1426);color:#fff;padding:14px 12px 12px 18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset -2px 0 0 rgba(255,255,255,.12),0 4px 10px rgba(26,37,64,.25);margin-bottom:6px;position:relative;overflow:hidden}
+.cov:after{content:"";position:absolute;left:18px;right:12px;top:50%;height:2px;background:var(--gold);opacity:.8}
+.cov .ct{font-family:var(--display);font-weight:700;font-size:15px;line-height:1.15;overflow-wrap:anywhere}
+.cov .ca{font-size:11px;color:#e8dcc0;letter-spacing:.3px}
+.bk b{font-size:13.5px;line-height:1.2}.bk small{color:var(--muted);font-size:12px}.bk p{margin:2px 0 6px;font-size:12.5px;color:var(--muted);flex:1}
+.bkbtn{align-self:flex-start;background:var(--navy);color:#fff!important;text-decoration:none;font-weight:700;font-size:12.5px;padding:7px 10px;border-radius:9px}
+.bkbtn:hover{background:var(--gold);color:var(--navy)!important}
 </style></head><body>
 
 
 
 <header class="bar">
 <a class="brand" href="#inicio">Bridge<b>HUB</b></a>
-<nav class="tabs"><a href="#inicio">Início</a><a href="#radar">📡 Radar</a><a href="#vagas">💼 Vagas</a><a href="#eventos">🎤 Eventos</a><a href="#empreender">🚀 Empreender</a><a href="#cupons">🎁 Cupons</a></nav>
+<nav class="tabs"><a href="#inicio">Início</a><a href="#radar">📡 Radar</a><a href="#vagas">💼 Vagas</a><a href="#eventos">🎤 Eventos</a><a href="#empreender">🚀 Empreender</a><a href="#biblioteca">📚 Biblioteca</a><a href="#cupons">🎁 Cupons</a></nav>
 </header>
 
 <section id="inicio">
@@ -244,6 +253,7 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
 <a class="big" href="#vagas"><div class="ic">💼</div><div><h2>Vagas</h2><p>Porto Alegre, RS, home office e concursos</p></div><div class="go">›</div></a>
 <a class="big" href="#eventos"><div class="ic">🎤</div><div><h2>Eventos</h2><p>Congressos, palestras, workshops e treinamentos</p></div><div class="go">›</div></a>
 <a class="big" href="#empreender"><div class="ic">🚀</div><div><h2>Empreender</h2><p>MEI, impostos, Sebrae e dicas pra quem empreende</p></div><div class="go">›</div></a>
+<a class="big" href="#biblioteca"><div class="ic">📚</div><div><h2>Biblioteca de Evolução</h2><p>Leituras pra evoluir em liderança, vendas e finanças</p></div><div class="go">›</div></a>
 <a class="big" href="#cupons"><div class="ic">🎁</div><div><h2>Cupons e descontos</h2><p>Descontos exclusivos de parceiros com o cupom BRIDGE</p></div><div class="go">›</div></a>
 </div>
 <p class="note">@lucasvitaloficial · Lucas Vital, Consultoria e Educação Corporativa</p>
@@ -588,6 +598,77 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
 
 
 
+<!--BIBLIOTECA-->
+<section id="biblioteca" hidden>
+<div class="wrap">
+<div class="hello"><div class="lbl">Biblioteca de Evolução</div><h1>Leituras pra evoluir</h1><p>47 livros escolhidos a dedo pelo Lucas em liderança, vendas, finanças, produtividade e desenvolvimento pessoal. Toque em "Onde ler ›" pra encontrar o livro.</p></div>
+<div class="vchips"><button class="vchip" data-go="bk-lid">👔 Liderança e gestão <span>10</span></button><button class="vchip" data-go="bk-ven">💰 Vendas e persuasão <span>9</span></button><button class="vchip" data-go="bk-fin">📈 Finanças e empreendedorismo <span>7</span></button><button class="vchip" data-go="bk-pro">⏱️ Produtividade e hábitos <span>6</span></button><button class="vchip" data-go="bk-emo">🧠 Inteligência emocional e desenvolvimento <span>12</span></button><button class="vchip" data-go="bk-mun">🌍 Visão de mundo <span>3</span></button></div>
+<div class="cp join"><h3>💡 Dá pra ler sem gastar</h3><p>Muitos desses livros estão no Kindle Unlimited e no Skeelo (os dois têm teste grátis) e nas bibliotecas públicas. Em Porto Alegre, a Biblioteca Pública do Estado empresta de graça. Livro bom também se troca com colega.</p></div>
+<div class="cp"><div class="hd"><div class="logo" style="background:var(--gold);color:var(--navy)">CV</div><div><h3>Currículo pronto pra usar</h3><div class="cat">Material do Lucas · gratuito</div></div></div><p style="margin:0;color:var(--muted)">Modelo em Word pra editar com as tuas informações.</p><div class="row"><a class="go2" style="margin-left:0" href="https://drive.google.com/file/d/1S6OBFUGrQhjn_da3m9hVUPGv4o-wJ0yd/view?usp=drivesdk">Baixar modelo ›</a></div></div>
+<div class="vgrp" id="bk-lid"><h2 class="vsub">👔 Liderança e gestão <span class="cnt" style="font-size:14px">10</span></h2><div class="shelf">
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">O Monge e o Executivo</span><span class="ca">James C. Hunter</span></div><b>O Monge e o Executivo</b><small>James C. Hunter</small><p>Liderança servidora explicada numa história simples.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=O+Monge+e+o+Executivo+James+C.+Hunter&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">Os 7 Hábitos das Pessoas Altamente Eficazes</span><span class="ca">Stephen R. Covey</span></div><b>Os 7 Hábitos das Pessoas Altamente Eficazes</b><small>Stephen R. Covey</small><p>Clássico de eficácia pessoal e profissional.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Os+7+H%C3%A1bitos+das+Pessoas+Altamente+Eficazes+Stephen+R.+Covey&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">Comece pelo Porquê</span><span class="ca">Simon Sinek</span></div><b>Comece pelo Porquê</b><small>Simon Sinek</small><p>Por que propósito engaja times e clientes.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Comece+pelo+Porqu%C3%AA+Simon+Sinek&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">25 Maneiras de Valorizar as Pessoas</span><span class="ca">John C. Maxwell e Les Parrott</span></div><b>25 Maneiras de Valorizar as Pessoas</b><small>John C. Maxwell e Les Parrott</small><p>Atitudes práticas pra fortalecer relações.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=25+Maneiras+de+Valorizar+as+Pessoas+John+C.+Maxwell&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">Scrum: A Arte de Fazer o Dobro do Trabalho na Metade do Tempo</span><span class="ca">Jeff Sutherland</span></div><b>Scrum: A Arte de Fazer o Dobro do Trabalho na Metade do Tempo</b><small>Jeff Sutherland</small><p>Método ágil aplicado a qualquer equipe.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Scrum%3A+A+Arte+de+Fazer+o+Dobro+do+Trabalho+na+Metade+do+Tempo+Jeff+Sutherland&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">Endomarketing de A a Z</span><span class="ca">Analisa de Medeiros Brum</span></div><b>Endomarketing de A a Z</b><small>Analisa de Medeiros Brum</small><p>Comunicação interna pra engajar colaboradores.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Endomarketing+de+A+a+Z+Analisa+de+Medeiros+Brum&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">Sonho Grande</span><span class="ca">Cristiane Correa</span></div><b>Sonho Grande</b><small>Cristiane Correa</small><p>A cultura de gestão de Lemann, Telles e Sicupira.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Sonho+Grande+Cristiane+Correa&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">Steve Jobs</span><span class="ca">Walter Isaacson</span></div><b>Steve Jobs</b><small>Walter Isaacson</small><p>A biografia do fundador da Apple.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Steve+Jobs+Walter+Isaacson&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">A Arte da Guerra</span><span class="ca">Sun Tzu</span></div><b>A Arte da Guerra</b><small>Sun Tzu</small><p>Estratégia milenar aplicada aos negócios.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=A+Arte+da+Guerra+Sun+Tzu&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1A2540"><span class="ct">Por Que Fazemos o Que Fazemos?</span><span class="ca">Mario Sergio Cortella</span></div><b>Por Que Fazemos o Que Fazemos?</b><small>Mario Sergio Cortella</small><p>Reflexões sobre trabalho, carreira e propósito.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Por+Que+Fazemos+o+Que+Fazemos%3F+Mario+Sergio+Cortella&i=stripbooks">Onde ler ›</a></div>
+</div></div>
+<div class="vgrp" id="bk-ven"><h2 class="vsub">💰 Vendas e persuasão <span class="cnt" style="font-size:14px">9</span></h2><div class="shelf">
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">O Livro Verde da Persuasão</span><span class="ca">Jeffrey Gitomer</span></div><b>O Livro Verde da Persuasão</b><small>Jeffrey Gitomer</small><p>Como convencer sem pressionar.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=O+Livro+Verde+da+Persuas%C3%A3o+Jeffrey+Gitomer&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">A Bíblia do Vendedor</span><span class="ca">Stephan Schiffman</span></div><b>A Bíblia do Vendedor</b><small>Stephan Schiffman</small><p>Fundamentos de prospecção e fechamento.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=A+B%C3%ADblia+do+Vendedor+Stephan+Schiffman&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">Inteligência Emocional em Vendas</span><span class="ca">Jeb Blount</span></div><b>Inteligência Emocional em Vendas</b><small>Jeb Blount</small><p>Controle emocional pra vender mais.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Intelig%C3%AAncia+Emocional+em+Vendas+Jeb+Blount&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">Como Fazer Amigos e Influenciar Pessoas</span><span class="ca">Dale Carnegie</span></div><b>Como Fazer Amigos e Influenciar Pessoas</b><small>Dale Carnegie</small><p>O clássico das relações humanas.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Como+Fazer+Amigos+e+Influenciar+Pessoas+Dale+Carnegie&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">O Lobo de Wall Street</span><span class="ca">Jordan Belfort</span></div><b>O Lobo de Wall Street</b><small>Jordan Belfort</small><p>A história real por trás do filme.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=O+Lobo+de+Wall+Street+Jordan+Belfort&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">A Caçada ao Lobo de Wall Street</span><span class="ca">Jordan Belfort</span></div><b>A Caçada ao Lobo de Wall Street</b><small>Jordan Belfort</small><p>A continuação da história.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=A+Ca%C3%A7ada+ao+Lobo+de+Wall+Street+Jordan+Belfort&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">Os Segredos do Lobo</span><span class="ca">Jordan Belfort</span></div><b>Os Segredos do Lobo</b><small>Jordan Belfort</small><p>Lições de vendas e persuasão do autor.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Os+Segredos+do+Lobo+Jordan+Belfort&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">A Arte de Ler Mentes</span><span class="ca">Henrik Fexeus</span></div><b>A Arte de Ler Mentes</b><small>Henrik Fexeus</small><p>Linguagem corporal e comunicação.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=A+Arte+de+Ler+Mentes+Henrik+Fexeus&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#9A7B2F"><span class="ct">Seja Assertivo!</span><span class="ca">Vera Martins</span></div><b>Seja Assertivo!</b><small>Vera Martins</small><p>Comunicação firme sem agressividade.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Seja+Assertivo%21+Vera+Martins&i=stripbooks">Onde ler ›</a></div>
+</div></div>
+<div class="vgrp" id="bk-fin"><h2 class="vsub">📈 Finanças e empreendedorismo <span class="cnt" style="font-size:14px">7</span></h2><div class="shelf">
+<div class="bk"><div class="cov" style="--bc:#1E6B4C"><span class="ct">Pai Rico, Pai Pobre</span><span class="ca">Robert T. Kiyosaki</span></div><b>Pai Rico, Pai Pobre</b><small>Robert T. Kiyosaki</small><p>Educação financeira que a escola não ensina.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Pai+Rico%2C+Pai+Pobre+Robert+T.+Kiyosaki&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1E6B4C"><span class="ct">Do Mil ao Milhão</span><span class="ca">Thiago Nigro</span></div><b>Do Mil ao Milhão</b><small>Thiago Nigro</small><p>Gastar bem, investir melhor e ganhar mais.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Do+Mil+ao+Milh%C3%A3o+Thiago+Nigro&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1E6B4C"><span class="ct">Os Segredos da Mente Milionária</span><span class="ca">T. Harv Eker</span></div><b>Os Segredos da Mente Milionária</b><small>T. Harv Eker</small><p>Como o modelo mental afeta o dinheiro.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Os+Segredos+da+Mente+Milion%C3%A1ria+T.+Harv+Eker&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1E6B4C"><span class="ct">Quem Pensa Enriquece</span><span class="ca">Napoleon Hill</span></div><b>Quem Pensa Enriquece</b><small>Napoleon Hill</small><p>Os princípios clássicos do sucesso.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Quem+Pensa+Enriquece+Napoleon+Hill&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1E6B4C"><span class="ct">Mais Esperto que o Diabo</span><span class="ca">Napoleon Hill</span></div><b>Mais Esperto que o Diabo</b><small>Napoleon Hill</small><p>Medo, persistência e liberdade.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Mais+Esperto+que+o+Diabo+Napoleon+Hill&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1E6B4C"><span class="ct">Geração de Valor</span><span class="ca">Flávio Augusto da Silva</span></div><b>Geração de Valor</b><small>Flávio Augusto da Silva</small><p>Empreendedorismo e atitude na prática.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Gera%C3%A7%C3%A3o+de+Valor+Fl%C3%A1vio+Augusto+da+Silva&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#1E6B4C"><span class="ct">O Milagre da Manhã para se Tornar um Milionário</span><span class="ca">Hal Elrod e David Osborn</span></div><b>O Milagre da Manhã para se Tornar um Milionário</b><small>Hal Elrod e David Osborn</small><p>Rotina matinal aplicada às finanças.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=O+Milagre+da+Manh%C3%A3+para+se+Tornar+um+Milion%C3%A1rio+Hal+Elrod&i=stripbooks">Onde ler ›</a></div>
+</div></div>
+<div class="vgrp" id="bk-pro"><h2 class="vsub">⏱️ Produtividade e hábitos <span class="cnt" style="font-size:14px">6</span></h2><div class="shelf">
+<div class="bk"><div class="cov" style="--bc:#2B5D8C"><span class="ct">O Poder do Hábito</span><span class="ca">Charles Duhigg</span></div><b>O Poder do Hábito</b><small>Charles Duhigg</small><p>Como hábitos se formam e se mudam.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=O+Poder+do+H%C3%A1bito+Charles+Duhigg&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#2B5D8C"><span class="ct">Mindset</span><span class="ca">Carol S. Dweck</span></div><b>Mindset</b><small>Carol S. Dweck</small><p>Mentalidade fixa x mentalidade de crescimento.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Mindset+Carol+S.+Dweck&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#2B5D8C"><span class="ct">O Milagre da Manhã</span><span class="ca">Hal Elrod</span></div><b>O Milagre da Manhã</b><small>Hal Elrod</small><p>Seis práticas pra começar bem o dia.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=O+Milagre+da+Manh%C3%A3+Hal+Elrod&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#2B5D8C"><span class="ct">A Tríade do Tempo</span><span class="ca">Christian Barbosa</span></div><b>A Tríade do Tempo</b><small>Christian Barbosa</small><p>Importante, urgente e circunstancial.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=A+Tr%C3%ADade+do+Tempo+Christian+Barbosa&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#2B5D8C"><span class="ct">Trabalho Organizado</span><span class="ca">Thais Godinho</span></div><b>Trabalho Organizado</b><small>Thais Godinho</small><p>Organização pessoal no dia a dia.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Trabalho+Organizado+Thais+Godinho&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#2B5D8C"><span class="ct">Hábitos Anti-Procrastinação</span><span class="ca">S. J. Scott</span></div><b>Hábitos Anti-Procrastinação</b><small>S. J. Scott</small><p>Passos simples pra parar de adiar.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=H%C3%A1bitos+Anti-Procrastina%C3%A7%C3%A3o+S.+J.+Scott&i=stripbooks">Onde ler ›</a></div>
+</div></div>
+<div class="vgrp" id="bk-emo"><h2 class="vsub">🧠 Inteligência emocional e desenvolvimento <span class="cnt" style="font-size:14px">12</span></h2><div class="shelf">
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Inteligência Emocional</span><span class="ca">Daniel Goleman</span></div><b>Inteligência Emocional</b><small>Daniel Goleman</small><p>O livro que popularizou o tema.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Intelig%C3%AAncia+Emocional+Daniel+Goleman&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Inteligência Social</span><span class="ca">Daniel Goleman</span></div><b>Inteligência Social</b><small>Daniel Goleman</small><p>A ciência das relações humanas.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Intelig%C3%AAncia+Social+Daniel+Goleman&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">O Jeito Harvard de Ser Feliz</span><span class="ca">Shawn Achor</span></div><b>O Jeito Harvard de Ser Feliz</b><small>Shawn Achor</small><p>Felicidade como vantagem no trabalho.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=O+Jeito+Harvard+de+Ser+Feliz+Shawn+Achor&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Em Busca de Sentido</span><span class="ca">Viktor E. Frankl</span></div><b>Em Busca de Sentido</b><small>Viktor E. Frankl</small><p>Propósito mesmo nas piores situações.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+Viktor+E.+Frankl&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">12 Regras para a Vida</span><span class="ca">Jordan B. Peterson</span></div><b>12 Regras para a Vida</b><small>Jordan B. Peterson</small><p>Responsabilidade e ordem na rotina.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=12+Regras+para+a+Vida+Jordan+B.+Peterson&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Ansiedade: Como Enfrentar o Mal do Século</span><span class="ca">Augusto Cury</span></div><b>Ansiedade: Como Enfrentar o Mal do Século</b><small>Augusto Cury</small><p>Gestão da emoção no dia a dia.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Ansiedade%3A+Como+Enfrentar+o+Mal+do+S%C3%A9culo+Augusto+Cury&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Seja Foda!</span><span class="ca">Caio Carneiro</span></div><b>Seja Foda!</b><small>Caio Carneiro</small><p>Atitude e alta performance.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Seja+Foda%21+Caio+Carneiro&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Enfodere-se!</span><span class="ca">Caio Carneiro</span></div><b>Enfodere-se!</b><small>Caio Carneiro</small><p>Continuação com foco em resultado.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Enfodere-se%21+Caio+Carneiro&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Pare de Reclamar e Concentre-se nas Coisas Boas</span><span class="ca">Will Bowen</span></div><b>Pare de Reclamar e Concentre-se nas Coisas Boas</b><small>Will Bowen</small><p>O desafio dos 21 dias sem reclamar.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Pare+de+Reclamar+e+Concentre-se+nas+Coisas+Boas+Will+Bowen&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Supercérebro</span><span class="ca">Deepak Chopra e Rudolph E. Tanzi</span></div><b>Supercérebro</b><small>Deepak Chopra e Rudolph E. Tanzi</small><p>Como usar melhor o cérebro.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Superc%C3%A9rebro+Deepak+Chopra&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">Como Vencer os Sentimentos Negativos</span><span class="ca">Maxwell Maltz</span></div><b>Como Vencer os Sentimentos Negativos</b><small>Maxwell Maltz</small><p>Autoimagem e mudança de comportamento.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Como+Vencer+os+Sentimentos+Negativos+Maxwell+Maltz&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#4E3E9C"><span class="ct">O Milagre da Manhã para Transformar seu Relacionamento</span><span class="ca">Hal Elrod</span></div><b>O Milagre da Manhã para Transformar seu Relacionamento</b><small>Hal Elrod</small><p>Rotina matinal aplicada à vida a dois.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=O+Milagre+da+Manh%C3%A3+para+Transformar+seu+Relacionamento+Hal+Elrod&i=stripbooks">Onde ler ›</a></div>
+</div></div>
+<div class="vgrp" id="bk-mun"><h2 class="vsub">🌍 Visão de mundo <span class="cnt" style="font-size:14px">3</span></h2><div class="shelf">
+<div class="bk"><div class="cov" style="--bc:#7A5A06"><span class="ct">Sapiens: Uma Breve História da Humanidade</span><span class="ca">Yuval Noah Harari</span></div><b>Sapiens: Uma Breve História da Humanidade</b><small>Yuval Noah Harari</small><p>Como chegamos até aqui.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=Sapiens%3A+Uma+Breve+Hist%C3%B3ria+da+Humanidade+Yuval+Noah+Harari&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#7A5A06"><span class="ct">21 Lições para o Século 21</span><span class="ca">Yuval Noah Harari</span></div><b>21 Lições para o Século 21</b><small>Yuval Noah Harari</small><p>Os grandes desafios de hoje.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=21+Li%C3%A7%C3%B5es+para+o+S%C3%A9culo+21+Yuval+Noah+Harari&i=stripbooks">Onde ler ›</a></div>
+<div class="bk"><div class="cov" style="--bc:#7A5A06"><span class="ct">As Últimas Notícias do Sapiens</span><span class="ca">Silvana Condemi e François Savatier</span></div><b>As Últimas Notícias do Sapiens</b><small>Silvana Condemi e François Savatier</small><p>Novas descobertas sobre nossa origem.</p><a class="bkbtn" href="https://www.amazon.com.br/s?k=As+%C3%9Altimas+Not%C3%ADcias+do+Sapiens+Silvana+Condemi&i=stripbooks">Onde ler ›</a></div>
+</div></div>
+<p class="note">Curadoria @lucasvitaloficial · Viva o processo, é nele que está o maior aprendizado.</p>
+</div>
+</section>
+<!--/BIBLIOTECA-->
+
 <section id="cupons" hidden>
 <div class="wrap">
 <div class="hello"><div class="lbl">Clube Bridge Comunidade</div><h1>Cupons e descontos</h1><p>Benefícios exclusivos de empresas parceiras pra quem faz parte da comunidade. É só copiar o cupom e falar com a empresa pelo link.</p></div>
@@ -606,7 +687,7 @@ section{padding:20px 16px 40px;scroll-margin-top:400px}
 
 <script>
 (function(){
- var ids=['inicio','radar','vagas','eventos','empreender','cupons'];
+ var ids=['inicio','radar','vagas','eventos','empreender','biblioteca','cupons'];
  function show(){
   var h=(location.hash||'#inicio').slice(1); if(ids.indexOf(h)<0) h='inicio';
   ids.forEach(function(i){document.getElementById(i).hidden=(i!==h);});
@@ -634,7 +715,8 @@ window.goatcounter={path:function(p){return location.pathname}};
   if(a.closest('.tabs')){name='aba/'+(a.getAttribute('href')||'').replace('#','');}
   else if(a.classList.contains('big')){name='inicio-botao/'+(a.getAttribute('href')||'').replace('#','');}
   else if(a.classList.contains('vbtn')){var li=a.closest('li');var b=li&&li.querySelector('b'),sm=li&&li.querySelector('small');name='vaga/'+(b?txt(b):'')+' | '+(sm?txt(sm):'');}
-  else if(a.classList.contains('vchip')){name='vagas-area/'+txt(a);}
+  else if(a.classList.contains('bkbtn')){var bk=a.closest('.bk');var bb=bk&&bk.querySelector('b');name='livro/'+(bb?txt(bb):'');}
+  else if(a.classList.contains('vchip')){name=(s==='biblioteca'?'biblioteca-tema/':'vagas-area/')+txt(a);}
   else if(a.classList.contains('st')){name='vagas-resumo/'+txt(a.querySelector('.k')||a);}
   else if(a.closest('.evr')){var h=a.closest('.evr').querySelector('h3');name='evento/'+(h?txt(h):txt(a));}
   else if(a.classList.contains('copy')||a.classList.contains('go2')){var cp=a.closest('.cp');var h3=cp&&cp.querySelector('h3');name='cupom/'+(h3?txt(h3):'')+(a.classList.contains('copy')?' | copiou cupom':' | foi pra loja');}
