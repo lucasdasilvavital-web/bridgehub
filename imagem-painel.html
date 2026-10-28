@@ -1,0 +1,23 @@
+<!-- Modelo da imagem diária "Painel" do BridgeHUB (1080x1350). Troque os {{...}} e gere o PNG com Playwright. -->
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;width:1080px;height:1350px;background:#0f1730;font-family:Arial,sans-serif;color:#fff;position:relative;overflow:hidden}
+.glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,.45),transparent 65%);top:-300px;right:-300px}
+.w{position:relative;padding:80px}
+.top{display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:Georgia,serif;font-size:44px;font-weight:700}.brand b{color:#C9A961}
+.pill{border:2px solid #C9A961;color:#C9A961;border-radius:40px;padding:10px 24px;font-weight:700;letter-spacing:3px;font-size:22px}
+.date{font-family:Georgia,serif;font-size:260px;line-height:.85;margin:80px 0 0;color:#C9A961;letter-spacing:-6px}
+.dw{font-size:46px;font-weight:700;margin:16px 0 70px;letter-spacing:2px}
+.list{display:flex;flex-direction:column;gap:22px}
+.it{display:flex;gap:26px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:24px 28px}
+.it i{font-style:normal;font-size:50px;width:70px;text-align:center}
+.it b{display:block;font-size:34px}.it span{font-size:25px;color:#cfd6e4}
+</style></head><body><div class="glow"></div><div class="w">
+<div class="top"><div class="brand">Bridge<b>HUB</b></div><div class="pill">HOJE NO APP</div></div>
+<div class="date">{{DATA}}</div><div class="dw">{{DIA_SEMANA}}</div>
+<div class="list">
+<div class="it"><i>{{EMOJI1}}</i><div><b>{{TITULO1}}</b><span>{{SUB1}}</span></div></div>
+<div class="it"><i>{{EMOJI2}}</i><div><b>{{TITULO2}}</b><span>{{SUB2}}</span></div></div>
+<div class="it"><i>{{EMOJI3}}</i><div><b>{{TITULO3}}</b><span>{{SUB3}}</span></div></div>
+<div class="it"><i>{{EMOJI4}}</i><div><b>{{TITULO4}}</b><span>{{SUB4}}</span></div></div>
+</div></div></body></html>
